@@ -1,0 +1,23 @@
+{
+  "name": "oauth",
+  "version": "0.1.0",
+  "description": "A collection of utilities for work with OAuth",
+  "main": "mod.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "oauth",
+    "oauth2",
+    "token",
+    "exchange"
+  ],
+  "author": "opiation <nick.gelinas@gmail.com>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
