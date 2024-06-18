@@ -1,7 +1,16 @@
 import { z } from "zod";
 
 export const GrantType = Object.freeze({
-  /** @see {@link https://datatracker.ietf.org/doc/html/rfc8693} */
+  /** @see {@link https://www.rfc-editor.org/rfc/rfc8628.html#section-3.4 RFC 8628 Section 3.4} */
+  DeviceCode: "urn:ietf:params:oauth:grant-type:device_code",
+
+  /** @see {@link https://www.rfc-editor.org/rfc/rfc7523.html#section-2.1 RFC 7523 Section 2.1} */
+  JWTBearer: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+
+  /** @see {@link https://www.rfc-editor.org/rfc/rfc7522.html#section-2.1 RFC 7522 Section 2.1} */
+  SAML2Bearer: "urn:ietf:params:oauth:grant-type:saml2-bearer",
+
+  /** @see {@link https://datatracker.ietf.org/doc/html/rfc8693 RFC 8693} */
   TokenExchange: "urn:ietf:params:oauth:grant-type:token-exchange",
 });
 /** @typedef {typeof GrantType[keyof typeof GrantType]} GrantType */
