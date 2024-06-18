@@ -38,9 +38,9 @@ tokenResponse.project // is known to be a FHIR Reference to a Medplum Project
 
 ## You'd like to exchange one access token for another
 
-Often, this situation arises when you want the front-end to communicate directly with an external service but don't want to have to force the user to authuenticate with that service. Instead, you have the external service trust your identity provider by granting the service provider some way of validating the identity provider's issued access token the user is providing.
+Often, this situation arises when you want the frontend to communicate directly with an external service but don't want to have to force the user to authenticate with that service. Instead, you have the external service trust your identity provider by granting the service provider some way of validating the identity provider's issued access token the user is providing.
 
-To put this into concrete terms, let's assume that you're using Auth0 as an identity provider and Medplum as the _service_ provider. In this setting, you want Medplum to just use the access token the user already has that was issed to them by Auth0 when they logged in. That way, the front-end can make requests directly to Medplum without requiring the user to also setup an account with Medplum and authenticate with them. As the service provider now, Medplum needs to be able to validate an access token issued by Auth0, thus you give Medplum some client credentials and configuration for it to query Auth0 for the identity of the user bearing the received token.
+To put this into concrete terms, let's assume that you're using Auth0 as an _identity provider_ and Medplum as the _service provider_. In this setting, you want Medplum to use the access token that was issued to the user by Auth0 when they logged in. That way, the frontend can make requests directly to Medplum without requiring the user to also setup an account with Medplum and authenticate with this service. As the service provider now, Medplum needs to be able to validate an access token issued by Auth0, thus you give Medplum some client credentials and configuration for it to query Auth0 for the identity of the user bearing the received token.
 
 This transaction is codified as a proposed standard in [RFC 8693 OAuth 2.0 Token Exchange][rfc-8693].
 
