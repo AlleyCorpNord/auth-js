@@ -15,7 +15,7 @@
   "author": "opiation <nick.gelinas@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
-    "zod": "^3.23.8"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "typescript": "^5.4.5"
